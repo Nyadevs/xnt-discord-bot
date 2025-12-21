@@ -9,8 +9,6 @@ import loadModals from '@/core/loadModals.ts';
 import reloadCommands from '@/core/reloadCommands.ts';
 import clientReady from '@/handlers/clientReady.ts';
 import interactionCreate from '@/handlers/interactionCreate.ts';
-import messageCreate from '@/handlers/messageCreate.ts';
-import { ScamClassifier } from '@/scam-classification';
 import type { ExtendedClient } from '@/types/ExtendedClient.ts';
 import type { CronJob } from 'cron';
 import dayjs from 'dayjs';
@@ -18,6 +16,7 @@ import duration from 'dayjs/plugin/duration';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import { Client, Collection, Events, GatewayIntentBits } from 'discord.js';
 import 'modernlog/patch';
+import { ScamClassifier } from './scam-classification';
 
 dayjs.extend(relativeTime);
 dayjs.extend(duration);
@@ -40,7 +39,7 @@ client.modals = new Collection<'string', InteractionModal>();
 
 client.once(Events.ClientReady, clientReady);
 client.on(Events.InteractionCreate, interactionCreate);
-client.on(Events.MessageCreate, messageCreate);
+//client.on(Events.MessageCreate, messageCreate);
 
 loadCommands(client).then(() => {
 	console.info('Loaded commands');

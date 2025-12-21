@@ -5,7 +5,7 @@ export default function SourceCodeEmbed() {
 		.setColor(0x70c7ba)
 		.setTitle('👨‍💻 Source Code')
 		.setDescription(
-			"You can view the source code of this bot on the [GitHub repository](https://github.com/imalfect/kaspa-discord-bot), it's licensed under GNU GPL v3."
+			"You can view the source code of this bot on the [GitHub repository](https://github.com/Nyadevs/xnt-discord-bot), it's licensed under GNU GPL v3."
 		)
 		.setTimestamp()
 		.setFooter({ text: process.env.BOT_NAME as string });
