@@ -8,7 +8,7 @@ export const statsChannelIds: { [key in StatsChannel]: string } = {
 	[StatsChannel.MarketCap]: '1452408822130933850'
 };
 
-export const priceCoinId = 'xnt-neptune-privacy';
+export const priceCoinId = 'neptune-io';
 
 export const priceCurrency = 'usd';
 
