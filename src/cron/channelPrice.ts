@@ -1,7 +1,7 @@
 import { priceCoinId, priceCurrency } from '@/config.ts';
 import getCirculatingSupply from '@/neptune/functions/getCirculatingSupply';
 import { StatsChannel } from '@/types/StatsChannel.ts';
-import getCoinPrice from '@/util/coinpaprika/getCoinPrice';
+import getCoinPrice from '@/util/cmc/getCoinPrice';
 import updateStatsChannel from '@/util/discord/updateStatsChannel.ts';
 import handleStatsRequestError from '@/util/handleStatsRequestError.ts';
 import nauToXNT from '@/util/neptune/nauToXNT';
