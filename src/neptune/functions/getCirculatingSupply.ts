@@ -5,6 +5,6 @@ export default async function getCirculatingSupply(): Promise<bigint> {
 		overview: {
 			total_reward: string;
 		};
-	}>('http://161.97.150.88:3001/api/overview');
+	}>('https://api.neptunescan.io/api/overview');
 	return BigInt(supplyData.overview.total_reward);
 }

@@ -5,6 +5,6 @@ export default async function getNetworkHashrate(): Promise<bigint> {
 		overview: {
 			network_speed_24h: string;
 		};
-	}>('http://161.97.150.88:3001/api/overview');
+	}>('https://api.neptunescan.io/api/overview');
 	return BigInt(hashrateData.overview.network_speed_24h);
 }
